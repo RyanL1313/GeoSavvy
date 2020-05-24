@@ -1,0 +1,13 @@
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.exe
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.deps.json
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.runtimeconfig.json
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.runtimeconfig.dev.json
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.dll
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\geoquizzer.pdb
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.AssemblyInfoInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.AssemblyInfo.cs
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.dll
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.pdb
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.genruntimeconfig.cache
