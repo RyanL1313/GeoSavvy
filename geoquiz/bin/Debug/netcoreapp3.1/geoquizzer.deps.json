@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "geoquizzer/1.0.0": {
+        "dependencies": {
+          "LoginPage": "1.0.0",
+          "MenuScreen": "1.0.0"
+        },
         "runtime": {
           "geoquizzer.dll": {}
+        }
+      },
+      "LoginPage/1.0.0": {
+        "runtime": {
+          "LoginPage.exe": {}
+        }
+      },
+      "MenuScreen/1.0.0": {
+        "runtime": {
+          "MenuScreen.exe": {}
         }
       }
     }
   },
   "libraries": {
     "geoquizzer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LoginPage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MenuScreen/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

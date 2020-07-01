@@ -1,0 +1,14 @@
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\SignUpPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\SignUpPage.exe
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\SignUpPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.SignUpPageForm.resources
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.Properties.Resources.resources
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.exe
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\MenuScreen.exe
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\MenuScreen.pdb
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\MenuScreen.exe.config
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.csproj.CopyComplete

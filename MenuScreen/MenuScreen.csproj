@@ -46,13 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuScreenHelpers.cs" />
+    <Compile Include="UserMenuScreen.cs" />
     <Compile Include="MenuScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuScreenForm.Designer.cs">
       <DependentUpon>MenuScreenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="MenuScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MenuScreenForm.resx">
       <DependentUpon>MenuScreenForm.cs</DependentUpon>
@@ -78,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sounds\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

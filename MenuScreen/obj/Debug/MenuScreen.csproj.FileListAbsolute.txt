@@ -1,0 +1,10 @@
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\MenuScreen.exe.config
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\MenuScreen.exe
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\MenuScreen.pdb
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.MenuScreenForm.resources
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.Properties.Resources.resources
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.exe
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.pdb
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.csprojAssemblyReference.cache

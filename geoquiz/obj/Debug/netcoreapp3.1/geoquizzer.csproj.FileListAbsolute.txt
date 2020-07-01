@@ -11,3 +11,10 @@ C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.As
 C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.dll
 C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.pdb
 C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.genruntimeconfig.cache
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\LoginPage.exe
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\MenuScreen.exe
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\LoginPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\LoginPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\MenuScreen.pdb
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\bin\Debug\netcoreapp3.1\MenuScreen.exe.config
+C:\Users\Ryan\source\repos\geoquiz\geoquiz\obj\Debug\netcoreapp3.1\geoquizzer.csproj.CopyComplete

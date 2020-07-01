@@ -1,11 +1,44 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "LoginPage/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/LoginPage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoginPage.dll": {}
+        }
+      },
+      "MenuScreen/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/MenuScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MenuScreen.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LoginPage/1.0.0": {
+      "type": "project",
+      "path": "../LoginPage/LoginPage.csproj",
+      "msbuildProject": "../LoginPage/LoginPage.csproj"
+    },
+    "MenuScreen/1.0.0": {
+      "type": "project",
+      "path": "../MenuScreen/MenuScreen.csproj",
+      "msbuildProject": "../MenuScreen/MenuScreen.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "LoginPage >= 1.0.0",
+      "MenuScreen >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Ryan\\.nuget\\packages\\": {}
@@ -32,7 +65,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj": {
+              "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj"
+            },
+            "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj": {
+              "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

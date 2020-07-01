@@ -2,11 +2,12 @@
 
 namespace geoquizzer
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-          
+            LoginPage.Form1 loginPage = new LoginPage.Form1();
+            loginPage.
         }
 
     }

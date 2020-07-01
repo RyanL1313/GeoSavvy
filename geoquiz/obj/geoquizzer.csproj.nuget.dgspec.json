@@ -26,7 +26,14 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj": {
+                "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj"
+              },
+              "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj": {
+                "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -54,6 +61,28 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj",
+        "projectName": "LoginPage",
+        "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\LoginPage\\LoginPage.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj",
+        "projectName": "MenuScreen",
+        "projectPath": "C:\\Users\\Ryan\\source\\repos\\geoquiz\\MenuScreen\\MenuScreen.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "geoquizzer": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}

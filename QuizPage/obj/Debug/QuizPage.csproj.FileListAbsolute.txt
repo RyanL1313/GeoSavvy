@@ -1,0 +1,10 @@
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\bin\Debug\QuizPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\bin\Debug\QuizPage.exe
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\bin\Debug\QuizPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.Properties.Resources.resources
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.QuizPageForm.resources
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.exe
+C:\Users\Ryan\source\repos\geoquiz\QuizPage\obj\Debug\QuizPage.pdb
