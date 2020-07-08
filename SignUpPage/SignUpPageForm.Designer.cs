@@ -143,7 +143,7 @@
             this.Controls.Add(this.SignupPageBackground);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUpPageForm";
-            this.Text = "Form1";
+            this.Text = "GeoSavvy";
             this.Load += new System.EventHandler(this.SignUpPageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SignupPageBackground)).EndInit();
             this.ResumeLayout(false);

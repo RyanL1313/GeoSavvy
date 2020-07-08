@@ -8,7 +8,6 @@ namespace MenuScreen
 {
     public class UserMenuScreen
     {
-        public static int userID;
         public static string username;
     }
 }

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuizPage\QuizPage.csproj">
+      <Project>{e4ec4cab-9843-4f88-a0c4-c8c0ba488504}</Project>
+      <Name>QuizPage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

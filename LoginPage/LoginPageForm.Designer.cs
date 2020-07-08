@@ -150,7 +150,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginPageForm";
-            this.Text = "Form1";
+            this.Text = "GeoSavvy";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LoginPageBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MenuScreen;
 
 namespace SignUpPage
 {
@@ -42,10 +43,18 @@ namespace SignUpPage
 
         private void SignupButton_Click(object sender, EventArgs e)
         {
-            bool userInfoValid = SignUpPageHelper.ValidUserInformation(UsernameTextBox.Text, SignUpPageHelper.HashPassword(PasswordTextBox.Text), EmailTextBox.Text);
+            bool userInfoValid = SignUpPageHelper.ValidUserInformation(UsernameTextBox.Text, PasswordTextBox.Text, EmailTextBox.Text);
 
             if (userInfoValid)
-                SignUpPageHelper.StoreUserInfo(UsernameTextBox.Text, SignUpPageHelper.HashPassword(PasswordTextBox.Text), EmailTextBox.Text); 
+            {
+                SignUpPageHelper.StoreUserInfo(UsernameTextBox.Text, SignUpPageHelper.HashPassword(PasswordTextBox.Text), EmailTextBox.Text);
+
+                this.Hide();
+                MenuScreenForm Menu = new MenuScreenForm();
+                UserMenuScreen.username = UsernameTextBox.Text;
+                Menu.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

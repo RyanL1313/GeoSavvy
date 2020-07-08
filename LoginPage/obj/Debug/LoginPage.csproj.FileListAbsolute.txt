@@ -15,3 +15,6 @@ C:\Users\Ryan\source\repos\geoquiz\LoginPage\obj\Debug\LoginPage.LoginPageForm.r
 C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\SignUpPage.exe
 C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\SignUpPage.pdb
 C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\SignUpPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\QuizPage.exe
+C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\QuizPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\LoginPage\bin\Debug\QuizPage.exe.config

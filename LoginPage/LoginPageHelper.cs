@@ -29,12 +29,9 @@ namespace LoginPage
                 string strCommand = $"SELECT UserID, username FROM UserInformation WHERE Username = '{username}' AND Pass = '{encryptedPassword}'";
                 SqlCommand cmd = new SqlCommand(strCommand, con);
                 SqlDataReader readCmd = cmd.ExecuteReader();
-                string id;
 
                 if (readCmd.Read())
                 {
-                    id = readCmd.GetValue(0).ToString();
-                    UserMenuScreen.userID = int.Parse(id);
                     UserMenuScreen.username = readCmd.GetValue(1).ToString();
                     return true;
                 }
