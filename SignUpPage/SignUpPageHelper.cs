@@ -46,6 +46,8 @@ namespace SignUpPage
 
             if (!UsernameAvailabile(username))
                 message = String.Concat(message, "That username is already taken. Try picking another one.\n");
+            if (!ValidEmailFormat(email))
+                message = String.Concat(message, "Invalid email.\n");
             if (!EmailAvailabile(email))
                 message = String.Concat(message, "That email is already associated with an account. Do you already have an account?\n");
             if (password.Length <= 7)
@@ -77,6 +79,11 @@ namespace SignUpPage
             }
 
             return false;
+        }
+
+        private static bool ValidEmailFormat(string email)
+        {
+            return email.Contains("@") && email.Contains(".");
         }
 
         private static bool EmailAvailabile(string email)

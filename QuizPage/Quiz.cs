@@ -7,36 +7,27 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
+using System.Media;
 
 namespace QuizPage
 {
     class Quiz
     {
         public const int numberOfQuestions = 10;
-        private List<int> missedQuestionIds = new List<int>();
-        private List<int> usedQuestionIds = new List<int>();
         private Question[] quizQuestions = new Question[numberOfQuestions];
-        private int questionIndex = 1;
+        private int questionIndex = 0;
+        public static string songLocation;
+        public static bool muted = false;
 
         public Quiz()
         {
             CreateQuizQuestionsWithAnswer();
         }
 
+
         public Question[] QuizQuestions
         {
             get { return quizQuestions; }
-        }
-
-
-        public void AddMissedQuestionId(int id)
-        {
-
-        }
-
-        public void AddUsedQuestionId(int id)
-        {
-
         }
 
         public void CreateQuizQuestionsWithAnswer()
@@ -47,7 +38,7 @@ namespace QuizPage
 
             if (con.State == ConnectionState.Open)
             {
-                string strCommand = "SELECT TOP " + numberOfQuestions + " QuestionID, Answer, Question FROM [Game." + QuizAttributes.dataTable + $"] ORDER BY NEWID()";
+                string strCommand = "SELECT TOP " + numberOfQuestions + " QuestionID, Answer, Question, ImagePath FROM [Game." + QuizAttributes.dataTable + $"] ORDER BY NEWID()";
                 SqlCommand cmd = new SqlCommand(strCommand, con);
                 SqlDataReader readCmd = cmd.ExecuteReader();
 
@@ -59,6 +50,7 @@ namespace QuizPage
                     quizQuestion.QuestionID = int.Parse(readCmd.GetValue(0).ToString());
                     quizQuestion.CorrectAnswer = readCmd.GetValue(1).ToString();
                     quizQuestion.QuestionText = readCmd.GetValue(2).ToString();
+                    quizQuestion.ImagePath = readCmd.GetValue(3).ToString();
 
                     // The question is all set now, just needs distractor answers, then it gets added to the quizQuestions array
                     quizQuestions[index++] = AddInDistractorAnswers(quizQuestion);

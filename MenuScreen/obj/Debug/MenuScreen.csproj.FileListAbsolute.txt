@@ -12,3 +12,6 @@ C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\QuizPage.exe
 C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\QuizPage.pdb
 C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\QuizPage.exe.config
 C:\Users\Ryan\source\repos\geoquiz\MenuScreen\obj\Debug\MenuScreen.csproj.CopyComplete
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\StatsPage.exe
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\StatsPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\MenuScreen\bin\Debug\StatsPage.exe.config

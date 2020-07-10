@@ -38,6 +38,7 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.SignupButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SignupPageBackground)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,6 @@
             this.SignupPageBackground.Size = new System.Drawing.Size(803, 452);
             this.SignupPageBackground.TabIndex = 0;
             this.SignupPageBackground.TabStop = false;
-            this.SignupPageBackground.Click += new System.EventHandler(this.Background_Click);
             // 
             // SignupLabel
             // 
@@ -62,7 +62,6 @@
             this.SignupLabel.Size = new System.Drawing.Size(189, 28);
             this.SignupLabel.TabIndex = 2;
             this.SignupLabel.Text = "Create Your Account";
-            this.SignupLabel.Click += new System.EventHandler(this.SignupLabel_Click);
             // 
             // UsernameLabel
             // 
@@ -96,28 +95,36 @@
             // 
             // UsernameTextBox
             // 
+            this.UsernameTextBox.BackColor = System.Drawing.Color.White;
             this.UsernameTextBox.Location = new System.Drawing.Point(75, 123);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 20);
             this.UsernameTextBox.TabIndex = 6;
+            this.UsernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameTextBox_KeyDown);
             // 
             // PasswordTextBox
             // 
+            this.PasswordTextBox.BackColor = System.Drawing.Color.White;
             this.PasswordTextBox.Location = new System.Drawing.Point(75, 219);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
             this.PasswordTextBox.TabIndex = 7;
+            this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
             // 
             // EmailTextBox
             // 
+            this.EmailTextBox.BackColor = System.Drawing.Color.White;
             this.EmailTextBox.Location = new System.Drawing.Point(344, 123);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(100, 20);
             this.EmailTextBox.TabIndex = 8;
+            this.EmailTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmailTextBox_KeyDown);
             // 
             // SignupButton
             // 
             this.SignupButton.BackColor = System.Drawing.Color.White;
+            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignupButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupButton.Location = new System.Drawing.Point(344, 174);
             this.SignupButton.Name = "SignupButton";
@@ -127,11 +134,25 @@
             this.SignupButton.UseVisualStyleBackColor = false;
             this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click);
             // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(12, 398);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(108, 40);
+            this.BackButton.TabIndex = 10;
+            this.BackButton.Text = "Back to Login";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // SignUpPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SignupButton);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.PasswordTextBox);
@@ -142,6 +163,8 @@
             this.Controls.Add(this.SignupLabel);
             this.Controls.Add(this.SignupPageBackground);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SignUpPageForm";
             this.Text = "GeoSavvy";
             this.Load += new System.EventHandler(this.SignUpPageForm_Load);
@@ -162,6 +185,7 @@
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Button SignupButton;
+        private System.Windows.Forms.Button BackButton;
     }
 }
 

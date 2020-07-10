@@ -90,6 +90,10 @@
       <Project>{e4ec4cab-9843-4f88-a0c4-c8c0ba488504}</Project>
       <Name>QuizPage</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StatsPage\StatsPage.csproj">
+      <Project>{e596d147-a409-4c42-be24-508b634379d3}</Project>
+      <Name>StatsPage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

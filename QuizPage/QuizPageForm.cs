@@ -15,10 +15,8 @@ namespace QuizPage
     public partial class QuizPageForm : Form
     {
         private const int numAnswerChoices = 4;
-        private int numQuestions = 0;
         private int correctAnswerIndex = 0;
         private int numberCorrect = 0;
-        Question[] questions;
         Quiz quiz;
 
         Button[] AnswerChoiceButtons = new Button[numAnswerChoices];
@@ -29,24 +27,39 @@ namespace QuizPage
 
         private void QuizPageForm_Load(object sender, EventArgs e)
         {
+            if (QuizAttributes.dataTable.Contains("Flags")) // Smaller picture to prevent blur
+            {
+                ImageForQuestionBox.Size = new Size(300, 200);
+                ImageForQuestionBox.Location = new Point(534, 163);
+            }
+            else
+            {
+                ImageForQuestionBox.Size = new Size(701, 450);
+                ImageForQuestionBox.Location = new Point(332, 68);
+            }
+
+            Quiz.muted = false;
             QuizPageHelpers.UpdateBackgroundImageMapping();
             BackgroundBox.BackgroundImage = QuizPageHelpers.GetQuizBackgroundImage();
             QuizPageHelpers.PlayRandomQuizMusic();
-
             AddButtonsToArray();
 
             quiz = new Quiz();
 
-            questions = quiz.QuizQuestions;
-            numQuestions = questions.Length;
+            SetUpQuestion();
+        }
 
-            // Allows the correct answer to be within a random button
+        private void SetUpQuestion()
+        {
+            NextQuestionButton.Click -= NextQuestionButton_Click;
             ChangeCorrectAnswerIndex();
-            SetUpButtonChoices(correctAnswerIndex, questions[0]);
-
-            QuestionLabel.Text = questions[0].QuestionText;
-            QuizProgressLabel.Text = $"{quiz.QuestionIndex}/{numQuestions}";
-            ImageForQuestionBox.BackgroundImage = QuizPageHelpers.GetQuestionImage(questions[0].CorrectAnswer);
+            CorrectAnswerNotifier.Visible = false;
+            ResetButtonBorders();
+            SetUpButtonChoices(correctAnswerIndex, quiz.QuizQuestions[quiz.QuestionIndex]);
+            SetUpQuestionLabels();
+            ImageForQuestionBox.BackgroundImage = QuizPageHelpers.GetQuestionImage(quiz.QuizQuestions[quiz.QuestionIndex].ImagePath);
+            DisableAnswerChoiceButtons(); // To avoid a double event from occurring
+            EnableAnswerChoiceButtons();
         }
 
         private void AddButtonsToArray()
@@ -63,11 +76,10 @@ namespace QuizPage
             correctAnswerIndex = randomGenerator.Next(0, 4);
         }
 
-        private void SetUpQuestionLabels(Question question)
+        private void SetUpQuestionLabels()
         {
-            QuestionLabel.Text = question.QuestionText;
-            QuizProgressLabel.Text = $"{quiz.QuestionIndex}/{Quiz.numberOfQuestions}";
-
+            QuestionLabel.Text = quiz.QuizQuestions[quiz.QuestionIndex].QuestionText;
+            QuizProgressLabel.Text = $"Question {quiz.QuestionIndex + 1}/{Quiz.numberOfQuestions}";
         }
 
         private void SetUpButtonChoices(int correctAnswerIndex, Question question)
@@ -104,6 +116,8 @@ namespace QuizPage
 
             if (correctAnswerIndex == buttonIndex)
             {
+                QuizPageHelpers.AddQuestionResultToDatabase(quiz.QuizQuestions[quiz.QuestionIndex].CorrectAnswer, true);
+
                 AnswerChoiceButtons[buttonIndex].FlatAppearance.BorderColor = Color.Green;
                 CorrectAnswerNotifier.Text = "Correct!";
                 CorrectAnswerNotifier.Visible = true;
@@ -111,21 +125,26 @@ namespace QuizPage
             }
             else
             {
+                QuizPageHelpers.AddQuestionResultToDatabase(quiz.QuizQuestions[quiz.QuestionIndex].CorrectAnswer, false);
+
                 foreach (Button choiceButton in AnswerChoiceButtons)
                     choiceButton.FlatAppearance.BorderColor = Color.Red;
 
                 AnswerChoiceButtons[correctAnswerIndex].FlatAppearance.BorderColor = Color.Green;
 
-                CorrectAnswerNotifier.Text = $"Incorrect. The correct answer was \"{questions[quiz.QuestionIndex - 1].CorrectAnswer}\".";
+                CorrectAnswerNotifier.Text = $"Incorrect. The correct answer was \"{quiz.QuizQuestions[quiz.QuestionIndex].CorrectAnswer}\".";
                 CorrectAnswerNotifier.Visible = true;
             }
 
-            if (quiz.QuestionIndex + 1 > numQuestions)
+            if (quiz.QuestionIndex + 1 >= Quiz.numberOfQuestions)
             {
                 FinishButton.Visible = true;
-                MessageBox.Show($"You have finished the quiz and scored a {((double)numberCorrect / numQuestions) * 100}%! Press \"finish\" to be taken back to the menu.");
-                NextQuestionButton.Click -= NextQuestionButton_Click;
+                MessageBox.Show($"You have finished the quiz and scored a {((double)numberCorrect / Quiz.numberOfQuestions) * 100}%! Press \"Finish\" to be taken back to the menu.");
             }
+
+            // Prevent double event from occurring
+            NextQuestionButton.Click -= NextQuestionButton_Click;
+            NextQuestionButton.Click += NextQuestionButton_Click;
         }
 
         private void ResetButtonBorders()
@@ -156,34 +175,42 @@ namespace QuizPage
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            CloseWindow();
+        }
+
+        private void NextQuestionButton_Click(object sender, EventArgs e)
+        {
+            if (quiz.QuestionIndex + 1 < Quiz.numberOfQuestions)
+            {
+                quiz.UpdateQuestionIndex();
+                SetUpQuestion();
+            }       
+        }
+
+        private void CloseWindow()
+        {
             QuizAttributes.ResetQuizProperties();
 
             this.DialogResult = DialogResult.OK;
         }
 
-        private void NextQuestionButton_Click(object sender, EventArgs e)
-        {
-            if (quiz.QuestionIndex < numQuestions)
-            {
-                EnableAnswerChoiceButtons();
-                quiz.UpdateQuestionIndex();
-                ChangeCorrectAnswerIndex();
-                CorrectAnswerNotifier.Visible = false;
-                ResetButtonBorders();
-                SetUpButtonChoices(correctAnswerIndex, questions[quiz.QuestionIndex - 1]);
-                SetUpQuestionLabels(questions[quiz.QuestionIndex - 1]);
-                ImageForQuestionBox.BackgroundImage = QuizPageHelpers.GetQuestionImage(questions[quiz.QuestionIndex - 1].CorrectAnswer);
-            }
-        }
-
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            
+            CloseWindow();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MuteButton_Click(object sender, EventArgs e)
         {
-
+            if (Quiz.muted)
+            {
+                QuizPageHelpers.PlaySetQuizMusic();
+                Quiz.muted = false;
+            }
+            else
+            {
+                QuizPageHelpers.MuteQuizMusic();
+                Quiz.muted = true;
+            }
         }
     }
 }

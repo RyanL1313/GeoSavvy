@@ -19,11 +19,6 @@ namespace SignUpPage
             InitializeComponent();
         }
 
-        private void Background_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SignUpPageForm_Load(object sender, EventArgs e)
         {
             SignupLabel.Parent = SignupPageBackground;
@@ -36,11 +31,6 @@ namespace SignUpPage
             EmailLabel.BackColor = Color.Transparent;
         }
 
-        private void SignupLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SignupButton_Click(object sender, EventArgs e)
         {
             bool userInfoValid = SignUpPageHelper.ValidUserInformation(UsernameTextBox.Text, PasswordTextBox.Text, EmailTextBox.Text);
@@ -49,12 +39,31 @@ namespace SignUpPage
             {
                 SignUpPageHelper.StoreUserInfo(UsernameTextBox.Text, SignUpPageHelper.HashPassword(PasswordTextBox.Text), EmailTextBox.Text);
 
-                this.Hide();
-                MenuScreenForm Menu = new MenuScreenForm();
-                UserMenuScreen.username = UsernameTextBox.Text;
-                Menu.ShowDialog();
-                this.Close();
+                this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SignupButton_Click(sender, e);
+        }
+
+        private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SignupButton_Click(sender, e);
+        }
+
+        private void EmailTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SignupButton_Click(sender, e);
         }
     }
 }

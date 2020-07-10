@@ -45,6 +45,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.BackColor = System.Drawing.Color.White;
             this.UsernameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UsernameLabel.Location = new System.Drawing.Point(83, 86);
@@ -68,6 +69,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.BackColor = System.Drawing.Color.White;
             this.PasswordLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.PasswordLabel.Location = new System.Drawing.Point(83, 197);
@@ -78,28 +80,34 @@
             // 
             // UsernameTextbox
             // 
+            this.UsernameTextbox.BackColor = System.Drawing.Color.White;
             this.UsernameTextbox.Location = new System.Drawing.Point(87, 120);
             this.UsernameTextbox.Name = "UsernameTextbox";
             this.UsernameTextbox.Size = new System.Drawing.Size(258, 22);
             this.UsernameTextbox.TabIndex = 4;
+            this.UsernameTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameTextbox_KeyDown);
             // 
             // PasswordTextBox
             // 
+            this.PasswordTextBox.BackColor = System.Drawing.Color.White;
             this.PasswordTextBox.Location = new System.Drawing.Point(87, 235);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(258, 22);
             this.PasswordTextBox.TabIndex = 5;
+            this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
             // 
             // LoginButton
             // 
+            this.LoginButton.BackColor = System.Drawing.Color.White;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.Location = new System.Drawing.Point(239, 316);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(106, 37);
             this.LoginButton.TabIndex = 6;
             this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PictureBox2
@@ -113,6 +121,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
+            this.TitleLabel.BackColor = System.Drawing.Color.White;
             this.TitleLabel.Font = new System.Drawing.Font("Lucida Calligraphy", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.Goldenrod;
             this.TitleLabel.Location = new System.Drawing.Point(354, 20);
@@ -123,13 +132,15 @@
             // 
             // SignUpButton
             // 
+            this.SignUpButton.BackColor = System.Drawing.Color.White;
+            this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.Location = new System.Drawing.Point(87, 316);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(106, 37);
             this.SignUpButton.TabIndex = 9;
             this.SignUpButton.Text = "Sign Up";
-            this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.UseVisualStyleBackColor = false;
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // LoginPageForm
@@ -149,6 +160,8 @@
             this.Controls.Add(this.PictureBox2);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginPageForm";
             this.Text = "GeoSavvy";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -1,0 +1,10 @@
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.Properties.Resources.resources
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\bin\Debug\StatsPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\bin\Debug\StatsPage.exe
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\bin\Debug\StatsPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.exe
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\StatsPage\obj\Debug\StatsPage.StatsPageForm.resources

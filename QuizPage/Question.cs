@@ -13,6 +13,7 @@ namespace QuizPage
     {
         private string questionText;
         private string correctAnswer;
+        private string imagePath;
         public string[] distractorAnswers = new string[3];
         private int questionID;
 
@@ -41,6 +42,12 @@ namespace QuizPage
         {
             get { return questionID; }
             set { questionID = value; }
+        }
+
+        public string ImagePath
+        {
+            get { return imagePath; }
+            set { imagePath = value; }
         }
     }
 }

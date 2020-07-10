@@ -39,7 +39,7 @@ namespace LoginPage
                 this.Hide();
                 MenuScreenForm Menu = new MenuScreenForm();
                 Menu.ShowDialog();
-                this.Close();
+                this.Show();
             }
             else
                 MessageBox.Show("Incorrect username/password. Don't have an account? Choose the sign up option.");
@@ -51,7 +51,19 @@ namespace LoginPage
             this.Hide();
             SignUpPageForm Signup = new SignUpPageForm();
             Signup.ShowDialog();
-            this.Close();
+            this.Show();
+        }
+
+        private void UsernameTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                LoginButton_Click(sender, e);
+        }
+
+        private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                LoginButton_Click(sender, e);
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using QuizPage;
+using StatsPage;
 
 namespace MenuScreen
 {
@@ -20,23 +21,9 @@ namespace MenuScreen
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MenuScreenForm_Load(object sender, EventArgs e)
         {
+            MenuAttributes.muted = false;
             GreetingLabel.Text = String.Concat(GreetingLabel.Text, UserMenuScreen.username + "!");
             QuizAttributes.userID = MenuScreenHelpers.GetUserID();
 
@@ -44,146 +31,98 @@ namespace MenuScreen
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void MenuScreenForm_VisibleChanged(object sender, EventArgs e)
         {
-            MenuScreenHelpers.PlayBackgroundMusic();
+            MenuAttributes.muted = false;
+
+            if (this.Visible)
+                MenuScreenHelpers.PlayBackgroundMusic();
+            else
+                MenuScreenHelpers.StopBackgroundMusic();
         }
 
-        private void USAButton_Click(object sender, EventArgs e)
+        private void MakeAllGameButtonsInvisible()
         {
-            USCapitalsButton.Visible = true;
-            USStatesButton.Visible = true;
+            USCapitalsButton.Visible = false;
+            USStatesButton.Visible = false;
+            USFlagsButton.Visible = false;
             SACapitalsButton.Visible = false;
             SACountriesButton.Visible = false;
+            SAFlagsButton.Visible = false;
             NACapitalsButton.Visible = false;
             NACountriesButton.Visible = false;
+            NAFlagsButton.Visible = false;
             EuropeanCapitalsButton.Visible = false;
             EuropeanCountriesButton.Visible = false;
+            EuropeFlagsButton.Visible = false;
             AfricanCapitalsButton.Visible = false;
             AfricanCountriesButton.Visible = false;
+            AfricanFlagsButton.Visible = false;
             OceanicCapitalsButton.Visible = false;
             OceanicCountriesButton.Visible = false;
+            OceanicFlagsButton.Visible = false;
             AsianCapitalsButton.Visible = false;
             AsianCountriesButton.Visible = false;
+            AsianFlagsButton.Visible = false;
+        }
+        private void USAButton_Click(object sender, EventArgs e)
+        {
+            MakeAllGameButtonsInvisible();
+            USCapitalsButton.Visible = true;
+            USStatesButton.Visible = true;
+            USFlagsButton.Visible = true;
         }
 
         private void SouthAmericaButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             SACapitalsButton.Visible = true;
             SACountriesButton.Visible = true;
-            NACapitalsButton.Visible = false;
-            NACountriesButton.Visible = false;
-            EuropeanCapitalsButton.Visible = false;
-            EuropeanCountriesButton.Visible = false;
-            AfricanCapitalsButton.Visible = false;
-            AfricanCountriesButton.Visible = false;
-            OceanicCapitalsButton.Visible = false;
-            OceanicCountriesButton.Visible = false;
-            AsianCapitalsButton.Visible = false;
-            AsianCountriesButton.Visible = false;
+            SAFlagsButton.Visible = true;
         }
 
         private void NorthAmericaButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
-            SACapitalsButton.Visible = false;
-            SACountriesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             NACapitalsButton.Visible = true;
             NACountriesButton.Visible = true;
-            EuropeanCapitalsButton.Visible = false;
-            EuropeanCountriesButton.Visible = false;
-            AfricanCapitalsButton.Visible = false;
-            AfricanCountriesButton.Visible = false;
-            OceanicCapitalsButton.Visible = false;
-            OceanicCountriesButton.Visible = false;
-            AsianCapitalsButton.Visible = false;
-            AsianCountriesButton.Visible = false;
+            NAFlagsButton.Visible = true;
         }
 
         private void EuropeButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
-            SACapitalsButton.Visible = false;
-            SACountriesButton.Visible = false;
-            NACapitalsButton.Visible = false;
-            NACountriesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             EuropeanCapitalsButton.Visible = true;
             EuropeanCountriesButton.Visible = true;
-            AfricanCapitalsButton.Visible = false;
-            AfricanCountriesButton.Visible = false;
-            OceanicCapitalsButton.Visible = false;
-            OceanicCountriesButton.Visible = false;
-            AsianCapitalsButton.Visible = false;
-            AsianCountriesButton.Visible = false;
+            EuropeFlagsButton.Visible = true;
         }
 
         private void AfricaButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
-            SACapitalsButton.Visible = false;
-            SACountriesButton.Visible = false;
-            NACapitalsButton.Visible = false;
-            NACountriesButton.Visible = false;
-            EuropeanCapitalsButton.Visible = false;
-            EuropeanCountriesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             AfricanCapitalsButton.Visible = true;
             AfricanCountriesButton.Visible = true;
-            OceanicCapitalsButton.Visible = false;
-            OceanicCountriesButton.Visible = false;
-            AsianCapitalsButton.Visible = false;
-            AsianCountriesButton.Visible = false;
+            AfricanFlagsButton.Visible = true;
         }
 
         private void OceaniaButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
-            SACapitalsButton.Visible = false;
-            SACountriesButton.Visible = false;
-            NACapitalsButton.Visible = false;
-            NACountriesButton.Visible = false;
-            EuropeanCapitalsButton.Visible = false;
-            EuropeanCountriesButton.Visible = false;
-            AfricanCapitalsButton.Visible = false;
-            AfricanCountriesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             OceanicCapitalsButton.Visible = true;
             OceanicCountriesButton.Visible = true;
-            AsianCapitalsButton.Visible = false;
-            AsianCountriesButton.Visible = false;
+            OceanicFlagsButton.Visible = true;
         }
 
         private void AsiaButton_Click(object sender, EventArgs e)
         {
-            USCapitalsButton.Visible = false;
-            USStatesButton.Visible = false;
-            SACapitalsButton.Visible = false;
-            SACountriesButton.Visible = false;
-            NACapitalsButton.Visible = false;
-            NACountriesButton.Visible = false;
-            EuropeanCapitalsButton.Visible = false;
-            EuropeanCountriesButton.Visible = false;
-            AfricanCapitalsButton.Visible = false;
-            AfricanCountriesButton.Visible = false;
-            OceanicCapitalsButton.Visible = false;
-            OceanicCountriesButton.Visible = false;
+            MakeAllGameButtonsInvisible();
             AsianCapitalsButton.Visible = true;
             AsianCountriesButton.Visible = true;
+            AsianFlagsButton.Visible = true;
         }
 
         private void OpenQuiz()
         {
-            MenuScreenHelpers.StopBackgroundMusic();
-
             this.Hide();
             QuizPageForm Quiz = new QuizPageForm();
             Quiz.ShowDialog();
@@ -301,5 +240,95 @@ namespace MenuScreen
 
             OpenQuiz();
         }
+
+        private void StatsPageButton_Click(object sender, EventArgs e)
+        {
+            StatsPageForm.userID = QuizAttributes.userID; // To view stats for this user
+
+            this.Hide();
+            StatsPageForm stats = new StatsPageForm();
+            stats.ShowDialog();
+            this.Show(); // When the stats form is closed out
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void MuteButton_Click(object sender, EventArgs e)
+        {
+            if (MenuAttributes.muted)
+            {
+                MenuScreenHelpers.PlayBackgroundMusic();
+                MenuAttributes.muted = false;
+            }
+            else
+            {
+                MenuScreenHelpers.StopBackgroundMusic();
+                MenuAttributes.muted = true;
+            }
+        }
+
+        private void USFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "USA";
+            QuizAttributes.dataTable = "USA.Flags";
+
+            OpenQuiz();
+        }
+
+        private void NAFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "North America";
+            QuizAttributes.dataTable = "NorthAmerica.Flags";
+
+            OpenQuiz();
+        }
+
+        private void SAFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "South America";
+            QuizAttributes.dataTable = "SouthAmerica.Flags";
+
+            OpenQuiz();
+        }
+
+        private void EuropeFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "Europe";
+            QuizAttributes.dataTable = "Europe.Flags";
+
+            OpenQuiz();
+        }
+
+        private void AfricanFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "Africa";
+            QuizAttributes.dataTable = "Africa.Flags";
+
+            OpenQuiz();
+        }
+
+        private void AsianFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "Asia";
+            QuizAttributes.dataTable = "Asia.Flags";
+
+            OpenQuiz();
+        }
+
+        private void OceanicFlagsButton_Click(object sender, EventArgs e)
+        {
+            QuizAttributes.region = "Oceania";
+            QuizAttributes.dataTable = "Oceania.Flags";
+
+            OpenQuiz();
+        }
+    }
+
+    public class MenuAttributes
+    {
+        public static bool muted = false;
     }
 }

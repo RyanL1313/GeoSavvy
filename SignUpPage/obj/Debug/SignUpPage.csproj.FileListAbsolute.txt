@@ -15,3 +15,6 @@ C:\Users\Ryan\source\repos\geoquiz\SignUpPage\obj\Debug\SignUpPage.csproj.CopyCo
 C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\QuizPage.exe
 C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\QuizPage.pdb
 C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\QuizPage.exe.config
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\StatsPage.exe
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\StatsPage.pdb
+C:\Users\Ryan\source\repos\geoquiz\SignUpPage\bin\Debug\StatsPage.exe.config
