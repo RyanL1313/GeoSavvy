@@ -24,7 +24,7 @@ namespace QuizPage
             QuizAttributes.QuizBackgroundFileMap.Add("Oceania", "AustralianOutback.jpg");
             QuizAttributes.QuizBackgroundFileMap.Add("Asia", "GreatWallOfChina.jpg");
             QuizAttributes.QuizBackgroundFileMap.Add("South America", "MachuPicchu.jpg");
-            QuizAttributes.QuizBackgroundFileMap.Add("North America", "MountRushmore.jpg");
+            QuizAttributes.QuizBackgroundFileMap.Add("North America", "MayanRuins.jpg");
             QuizAttributes.QuizBackgroundFileMap.Add("Africa", "Sphinx.jpeg");
             QuizAttributes.QuizBackgroundFileMap.Add("Europe", "Venice.jpg");
             QuizAttributes.QuizBackgroundFileMap.Add("USA", "WhiteHouse.jpg");

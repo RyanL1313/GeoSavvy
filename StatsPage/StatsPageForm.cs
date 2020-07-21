@@ -37,6 +37,9 @@ namespace StatsPage
         {
             regionSelected = "Africa";
 
+            ResetButtonBorderColors();
+            AfricaButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
+
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
             StatesButton.Visible = false;
@@ -46,6 +49,9 @@ namespace StatsPage
         private void AsiaButton_Click(object sender, EventArgs e)
         {
             regionSelected = "Asia";
+
+            ResetButtonBorderColors();
+            AsiaButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
 
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
@@ -57,6 +63,9 @@ namespace StatsPage
         {
             regionSelected = "Europe";
 
+            ResetButtonBorderColors();
+            EuropeButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
+
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
             StatesButton.Visible = false;
@@ -66,6 +75,9 @@ namespace StatsPage
         private void NorthAmericaButton_Click(object sender, EventArgs e)
         {
             regionSelected = "NorthAmerica";
+
+            ResetButtonBorderColors();
+            NorthAmericaButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
 
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
@@ -77,6 +89,9 @@ namespace StatsPage
         {
             regionSelected = "Oceania";
 
+            ResetButtonBorderColors();
+            OceaniaButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
+
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
             StatesButton.Visible = false;
@@ -86,6 +101,9 @@ namespace StatsPage
         private void SouthAmericaButton_Click(object sender, EventArgs e)
         {
             regionSelected = "SouthAmerica";
+
+            ResetButtonBorderColors();
+            SouthAmericaButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
 
             CountriesButton.Visible = true;
             CapitalsButton.Visible = true;
@@ -97,10 +115,24 @@ namespace StatsPage
         {
             regionSelected = "USA";
 
+            ResetButtonBorderColors();
+            UnitedStatesButton.FlatAppearance.BorderColor = Color.LightSkyBlue;
+
             CountriesButton.Visible = false;
             CapitalsButton.Visible = true;
             StatesButton.Visible = true;
             FlagsButton.Visible = true;
+        }
+
+        private void ResetButtonBorderColors()
+        {
+            AfricaButton.FlatAppearance.BorderColor = Color.Empty;
+            AsiaButton.FlatAppearance.BorderColor = Color.Empty;
+            EuropeButton.FlatAppearance.BorderColor = Color.Empty;
+            NorthAmericaButton.FlatAppearance.BorderColor = Color.Empty;
+            SouthAmericaButton.FlatAppearance.BorderColor = Color.Empty;
+            OceaniaButton.FlatAppearance.BorderColor = Color.Empty;
+            UnitedStatesButton.FlatAppearance.BorderColor = Color.Empty;
         }
 
         private void StatesButton_Click(object sender, EventArgs e)
